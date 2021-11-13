@@ -10,8 +10,6 @@ var currentDayEl = moment().format("MMM Do, YYYY");
 $("#currentDay").text("Today is " + currentDayEl);
 console.log(currentDayEl);
 
-
-
 var setTimeEL = moment("8:00 AM", ["h:mm A"]).format("hh:mm A");
 $("#eightAm").text(setTimeEL);
 
@@ -45,13 +43,16 @@ $("#fivePm").text(setTimeEL);
 var setTimeEL = moment("6:00 PM", ["h:mm A"]).format("hh:mm A");
 $("#sixPm").text(setTimeEL);
 
+var foo = {unique_prop: 1}, bar = {unique_prop: 2}, object = {};
+object[foo] = 'value'
+console.log(object[bar])
+
+
 
  //color coded for past, present or future
 
 // if moment current is =< mometn set past color light grey
 
-
-//moment().set('hour', 13)
 
 // if moment current is =< mometn set present   light blue
 // if moment current is =< mometn set future    light green

@@ -5,19 +5,11 @@ body {
   background-color: #06aed5;
 }
 
-textarea {
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
-}
-
 .jumbotron {
   text-align: center;
   background-color: rgb(201, 201, 201);
   color: black;
+  border: solid black;
   border-radius: 45px;
   border-top: 10px solid #ff6961;
 }
@@ -35,10 +27,10 @@ textarea {
   border: 3px solid black;
 }
 
-/* .row {
+.row {
   height: 80px;
   border-top: 1px solid white;
-} */
+}
 
 .hour {
   color: #000000;
@@ -62,23 +54,21 @@ textarea {
 }
 
 .saveBtn {
-  text-align: center;
-  text-align: middle;
   border: 3px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #66d75c;
+  background-color: #ff6961;
   color: white;
-  height: 38px;
+  height: 80px;
+  padding-top: -15px;
 }
 
-.saveBtn :hover {
-  background-color: #77dd77;
-  transition: all 0.3s ease-in-out;
-}
-
-.tableHeader {
+.sectionHeader {
   text-align: center;
   padding: 24px;
-  color: rgb(0, 0, 0);
+  color: black;
+}
+
+.lead {
+  color: rgb(0 123 255);
 }
