@@ -19,12 +19,14 @@ body {
   color: white;
 }
 
+.container {
+  padding-bottom: 85px;
+}
+
 .time-block {
-  height: 38px;
-  background-color: rgb(154, 154, 154);
-  text-align: center;
-  text-align: middle;
-  border: 3px solid black;
+  font-weight: 900;
+  color: rgb(135, 100, 239);
+  text-align: right;
 }
 
 .row {
@@ -65,7 +67,7 @@ body {
 
 .sectionHeader {
   text-align: center;
-  padding: 24px;
+  margin-bottom: 20px;
   color: black;
 }
 
