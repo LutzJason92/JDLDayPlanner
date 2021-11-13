@@ -1,7 +1,8 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Varela Round", sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: #06aed5;
 }
 
 textarea {
@@ -15,31 +16,34 @@ textarea {
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: rgb(201, 201, 201);
   color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
+  border-radius: 45px;
+  border-top: 10px solid #ff6961;
 }
 
 .description {
   white-space: pre-wrap;
+  color: white;
 }
 
 .time-block {
+  height: 38px;
+  background-color: rgb(154, 154, 154);
   text-align: center;
-  border-radius: 15px;
+  text-align: middle;
+  border: 3px solid black;
 }
 
-.row {
-  white-space: pre-wrap;
+/* .row {
   height: 80px;
   border-top: 1px solid white;
-}
+} */
 
 .hour {
-  background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  height: 38px;
 }
 
 .past {
@@ -58,14 +62,23 @@ textarea {
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  text-align: center;
+  text-align: middle;
+  border: 3px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  background-color: #66d75c;
   color: white;
+  height: 38px;
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
+.saveBtn :hover {
+  background-color: #77dd77;
   transition: all 0.3s ease-in-out;
+}
+
+.tableHeader {
+  text-align: center;
+  padding: 24px;
+  color: rgb(0, 0, 0);
 }

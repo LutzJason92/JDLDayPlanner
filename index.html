@@ -8,17 +8,10 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Varela+Round&display=swap');
+      </style>
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -26,13 +19,147 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p class="lead"> </p>
+      
     </header>
+    
+    <h3 class="tableHeader" id="currentDay"></h3>
+     
+    
     <div class="container">
-      <!-- Timeblocks go here -->
-    </div>
+      <table class="table-light">
+        <!-- thead defines columns -->
+        <thead>
+          <tr>
+            <!-- column width for time -->
+            <th scope="col" class="col-1 col-md-1 col-xl-1" id="timeCol"></th>
+            <!-- column width for event -->
+            <th scope="col" class="col-10 col-md-10 col-xl-10" id="eventCol"></th>
+            <!-- column width for button -->
+            <th scope="col" class="col-1 col-md-1 col-xl-1"  id="saveCol" ></th>
+          </tr>
+        </thead>
+          <!-- defines rows and thier content -->
+        <tbody>
+          <tr>
+            <!-- 8am -->
+            <td scope="row" id="eightAm" class="time-block" ></td>
+            <td>
+              <input id="eventInput" class="form-control form-control-md" type="text" placeholder="add event here">
+            </td>
+            <td>
+              <button id="clickButton" class="saveBtn" >Confirm</button>
+            </td>
+          </tr>
+          <!-- 9am -->
+          <tr>
+            <td scope="row" id="nineAm" class="time-block" ></td>
+            <td>
+              <input id="eventInput" class="form-control form-control-md" type="text" placeholder="add event here">
+            </td>
+            <td>
+              <button id="clickButton" class="saveBtn" >Confirm</button>
+            </td>
+          </tr>
+          <!-- 10am -->
+          <tr>
+            <td scope="row" id="tenAm" class="time-block"></td>
+            <td>
+              <input id="eventInput" class="form-control form-control-md" type="text" placeholder="add event here">
+            </td>
+            <td>
+              <button id="clickButton" class="saveBtn" >Confirm</button>
+            </td>
+          </tr>
+          <!-- 11am -->
+          <tr>
+            <td scope="row" id="elevenAm" class="time-block"></td>
+            <td>
+              <input id="eventInput" class="form-control form-control-md" type="text" placeholder="add event here">
+            </td>
+            <td>
+              <button id="clickButton" class="saveBtn" >Confirm</button>
+            </td>
+          </tr>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+          <!-- 12pm -->
+          <tr>
+            <td scope="row" id="twelvePm" class="time-block"></td>
+            <td>
+              <input id="eventInput" class="form-control form-control-md" type="text" placeholder="add event here">
+            </td>
+            <td>
+              <button id="clickButton" class="saveBtn" >Confirm</button>
+            </td>
+          </tr>
+
+          <!-- 1pm -->
+          <tr>
+            <td scope="row" id="onePm" class="time-block"></td>
+            <td>
+              <input id="eventInput" class="form-control form-control-md" type="text" placeholder="add event here">
+            </td>
+            <td>
+              <button id="clickButton" class="saveBtn" >Confirm</button>
+            </td>
+          </tr>
+
+          <!-- 2pm -->
+          <tr>
+            <td scope="row" id="twoPm" class="time-block"></td>
+            <td>
+              <input id="eventInput" class="form-control form-control-md" type="text" placeholder="add event here">
+            </td>
+            <td>
+              <button id="clickButton" class="saveBtn" >Confirm</button>
+            </td>
+          </tr>
+          <!-- 3pm -->
+          <tr>
+            <td scope="row" id="threePm" class="time-block"></td>
+            <td>
+              <input id="eventInput" class="form-control form-control-md" type="text" placeholder="add event here">
+            </td>
+            <td>
+              <button id="clickButton" class="saveBtn" >Confirm</button>
+            </td>
+          </tr>
+          <!-- 4pm -->
+          <tr>
+            <td scope="row" id="fourPm" class="time-block"></td>
+            <td>
+              <input id="eventInput" class="form-control form-control-md" type="text" placeholder="add event here">
+            </td>
+            <td>
+              <button id="clickButton" class="saveBtn" >Confirm</button>
+            </td>
+          </tr>
+              <!-- 5pm -->
+          <tr>
+            <td scope="row" id="fivePm" class="time-block"></td>
+            <td>
+              <input id="eventInput" class="form-control form-control-md" type="text" placeholder="add event here">
+            </td>
+            <td>
+              <button id="clickButton" class="saveBtn" >Confirm</button>
+            </td>
+          </tr>
+            <!-- 6pm -->
+          <tr>
+            <td scope="row" id="sixPm" class="time-block"></td>
+            <td>
+              <input id="eventInput" class="form-control form-control-md" type="text" placeholder="add event here">
+            </td>
+            <td>
+              <button id="clickButton" class="saveBtn" >Confirm</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
