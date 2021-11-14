@@ -1,54 +1,28 @@
-// ______________________________________________________________
-// ids for col #timeCol         #eventCol           #saveCol
-
-// ids for rows #setTime        #eventInput         #clickButton
-// classes for rows 
-
-// ______________________________________________________________
+//----------------- variable declarations ----------------
 var weekDayEl = moment().format("dddd");
-var currentDayEl = moment().format("MMM Do, YYYY"); 
-$("#currentDay").text("Today is " + weekDayEl + " " + currentDayEl+ ".");
-var currentTimeEl = moment().format("hh:mm A");
+var currentDayEl = moment().format("dddd MMM Do, YYYY"); 
+var time = moment();
+var currentTimeEl = moment().format("h:mm A");
+var currentTime = moment().format("HH:mm")
+
+var setTimeEight = moment("8:00", ["HH:mm"]).format("HH:mm");
+var setTimeNine = moment("9:00", ["HH:mm"]).format("HH:mm");
+var setTimeTen = moment("10:00", ["HH:mm"]).format("HH:mm");
+var setTimeEleven = moment("11:00", ["HH:mm"]).format("HH:mm");
+var setTimeTwelve = moment("12:00", ["HH:mm"]).format("HH:mm");
+var setTimeOne = moment("13:00", ["HH:mm"]).format("HH:mm");
+var setTimeTwo = moment("14:00", ["HH:mm"]).format("HH:mm");
+var setTimeThree = moment("15:00", ["HH:mm"]).format("HH:mm");
+var setTimeFour = moment("16:00", ["HH:mm"]).format("HH:mm");
+var setTimeFive = moment("17:00", ["HH:mm"]).format("HH:mm");
+var setTimeSix = moment("18:00", ["HH:mm"]).format("HH:mm");
+
+
+// -----------------set time and date for header-------------
+$("#currentDay").text("Today is " + currentDayEl+ ".");
 $("#currentTime").text("The time is " + currentTimeEl);
 
-var time = moment();
-
-
-var setTimeEight = moment("8:00 AM", ["hh:mm A"]).format("hh:mm A");
-$("#eightAm").text(setTimeEight);
-
-var setTimeNine = moment("9:00 AM", ["hh:mm A"]).format("hh:mm A");
-$("#nineAm").text(setTimeNine);
-
-var setTimeTen = moment("10:00 AM", ["hh:mm A"]).format("hh:mm A");
-$("#tenAm").text(setTimeTen);
-
-var setTimeEleven = moment("11:00 AM", ["hh:mm A"]).format("hh:mm A");
-$("#elevenAm").text(setTimeEleven);
-
-var setTimeTwelve = moment("12:00 PM", ["hh:mm A"]).format("hh:mm A");
-$("#twelvePm").text(setTimeTwelve);
-
-var setTimeOne = moment("1:00 PM", ["hh:mm A"]).format("hh:mm A");
-$("#onePm").text(setTimeOne);
-
-var setTimeTwo = moment("2:00 PM", ["hh:mm A"]).format("hh:mm A");
-$("#twoPm").text(setTimeTwo);
-
-var setTimeThree = moment("3:00 PM", ["hh:mm A"]).format("hh:mm A");
-$("#threePm").text(setTimeThree);
-
-var setTimeFour = moment("4:00 PM", ["hh:mm A"]).format("hh:mm A");
-$("#fourPm").text(setTimeFour);
-
-var setTimeFive = moment("5:00 PM", ["hh:mm A"]).format("hh:mm A");
-$("#fivePm").text(setTimeFive);
-
-var setTimeSix = moment("6:00 PM", ["hh:mm A"]).format("hh:mm A");
-$("#sixPm").text(setTimeSix);
-
-
-// ------------------buttons and text entry---------------------
+// ------------------ buttons and local storage  ---------------------
 $("#eightBtn").on("click", function() {
     var textEntry = $("#eightText").val();
     localStorage.setItem("8:00AM", textEntry)
@@ -118,23 +92,188 @@ $("#sixText").val(localStorage.getItem("6:00PM"));
  // --------------if statements for color coded for past, present or future---------------
 
 
-var currentTime = moment().format("hh:mm A")
-var timeColor = document.querySelector(".form-control.eightColor")
+var etimeColor = document.querySelector(".form-control.eightColor")
 function eightBoxColor() {
     if (currentTime > setTimeEight) {
-        $(timeColor).addClass("past");
+        $(etimeColor).addClass("past");
     }
     else if (currentTime === setTimeEight) {
-        $(timeColor).addClass("present");
+        $(etimeColor).addClass("present");
     }
     else (currentTime < setTimeEight);{
-        $(timeColor).addClass("future");
+        $(etimeColor).addClass("future");
     }
 }; 
 eightBoxColor()
 
-console.log(currentTimeEl)
-console.log(timeColor)
+var ntimeColor = document.querySelector(".form-control.nineColor")
+function nineBoxColor() {
+    if (currentTime > setTimeNine) {
+        $(ntimeColor).addClass("past");
+    }
+    else if (currentTime === setTimeNine) {
+        $(ntimeColor).addClass("present");
+    }
+    else (currentTime < setTimeNine);{
+        $(ntimeColor).addClass("future");
+    }
+}; 
+nineBoxColor()
+
+var ttimeColor = document.querySelector(".form-control.tenColor")
+function tenBoxColor() {
+    if (currentTime > setTimeNine) {
+        $(ttimeColor).addClass("past");
+    }
+    else if (currentTime === setTimeTen) {
+        $(ttimeColor).addClass("present");
+    }
+    else (currentTime < setTimeTen);{
+        $(ttimeColor).addClass("future");
+    }
+}; 
+tenBoxColor()
+
+var eLtimeColor = document.querySelector(".form-control.elevenColor")
+function elevenBoxColor() {
+    if (currentTime > setTimeEleven) {
+        $(eLtimeColor).addClass("past");
+    }
+    else if (currentTime === setTimeEleven) {
+        $(eLtimeColor).addClass("present");
+    }
+    else (currentTime < setTimeEleven);{
+        $(eLtimeColor).addClass("future");
+    }
+}; 
+elevenBoxColor()
+
+var tWtimeColor = document.querySelector(".form-control.twelveColor")
+function twelveBoxColor() {
+    if (currentTime > setTimeTwelve) {
+        $(tWtimeColor).addClass("past");
+    }
+    else if (currentTime === setTimeTwelve) {
+        $(tWtimeColor).addClass("present");
+    }
+    else (currentTime < setTimeTwelve);{
+        $(tWtimeColor).addClass("future");
+    }
+}; 
+twelveBoxColor()
+
+var otimeColor = document.querySelector(".form-control.oneColor")
+function oneBoxColor() {
+    if (currentTime > setTimeOne) {
+        $(otimeColor).addClass("past");
+    }
+    else if (currentTime === setTimeOne) {
+        $(otimeColor).addClass("present");
+    }
+    else (currentTime < setTimeOne);{
+        $(otimeColor).addClass("future");
+    }
+}; 
+oneBoxColor()
+
+var wOtimeColor = document.querySelector(".form-control.twoColor")
+function twoBoxColor() {
+    if (currentTime > setTimeTwo) {
+        $(wOtimeColor).addClass("past");
+    }
+    else if (currentTime === setTimeTwo) {
+        $(wOtimeColor).addClass("present");
+    }
+    else (currentTime < setTimeTwo);{
+        $(wOtimeColor).addClass("future");
+    }
+}; 
+twoBoxColor()
+
+var tHtimeColor = document.querySelector(".form-control.threeColor")
+function threeBoxColor() {
+    if (currentTime > setTimeThree) {
+        $(tHtimeColor).addClass("past");
+    }
+    else if (currentTime === setTimeThree) {
+        $(tHtimeColor).addClass("present");
+    }
+    else (currentTime < setTimeThree);{
+        $(tHtimeColor).addClass("future");
+    }
+}; 
+threeBoxColor()
+
+var ftimeColor = document.querySelector(".form-control.fourColor")
+function fourBoxColor() {
+    if (currentTime > setTimeFour) {
+        $(ftimeColor).addClass("past");
+    }
+    else if (currentTime === setTimeFour) {
+        $(ftimeColor).addClass("present");
+    }
+    else (currentTime < setTimeFour);{
+        $(ftimeColor).addClass("future");
+    }
+}; 
+fourBoxColor()
+
+var vtimeColor = document.querySelector(".form-control.fiveColor")
+function fiveBoxColor() {
+    if (currentTime > setTimeFive) {
+        $(vtimeColor).addClass("past");
+    }
+    else if (currentTime === setTimeFive) {
+        $(vtimeColor).addClass("present");
+    }
+    else (currentTime < setTimeFive);{
+        $(vtimeColor).addClass("future");
+    }
+}; 
+fiveBoxColor()
+
+var stimeColor = document.querySelector(".form-control.sixColor")
+function sixBoxColor() {
+    if (currentTime > setTimeSix) {
+        $(stimeColor).addClass("past");
+    }
+    else if (currentTime === setTimeSix) {
+        $(stimeColor).addClass("present");
+    }
+    else (currentTime < setTimeSix);{
+        $(stimeColor).addClass("future");
+    }
+}; 
+sixBoxColor()
+
+
+// console.log for Current Time
+console.log(currentTime)
+
+// console.log for times set
+
 console.log(setTimeEight)
+console.log(setTimeNine)
+console.log(setTimeTen)
+console.log(setTimeEleven)
+console.log(setTimeTwelve)
+console.log(setTimeOne)
+console.log(setTimeTwo)
+console.log(setTimeThree)
+console.log(setTimeFour)
+console.log(setTimeFive)
+console.log(setTimeSix)
+
+// query selectors to apply past, present, future class
+// console.log(etimeColor)
+// console.log(ntimeColor)
+// console.log(ttimeColor)
+// console.log(eLtimeColor)
+// console.log(tWtimeColor)
+// console.log(otimeColor)
+// console.log(wOtimeColor)
+// console.log(tHtimeColor)
+// console.log(ftimeColor)
+// console.log(stimeColor)
 
 
