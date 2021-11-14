@@ -8,41 +8,41 @@
 var weekDayEl = moment().format("dddd");
 var currentDayEl = moment().format("MMM Do, YYYY"); 
 $("#currentDay").text("Today is " + weekDayEl + " " + currentDayEl+ ".");
-var currentTimeEl = moment().format("hh:mm A");
+var currentTimeEl = moment().format("h:mm A");
 $("#currentTime").text("The time is " + currentTimeEl);
 
-
-var setTimeEL = moment("8:00 AM", ["h:mm A"]).format("hh:mm A");
+// 
+var setTimeEL = moment("8:00 AM", ["h:mm A"]).format("h:mm A");
 $("#eightAm").text(setTimeEL);
 
-var setTimeEL = moment("9:00 AM", ["h:mm A"]).format("hh:mm A");
+var setTimeEL = moment("9:00 AM", ["h:mm A"]).format("h:mm A");
 $("#nineAm").text(setTimeEL);
 
-var setTimeEL = moment("10:00 AM", ["h:mm A"]).format("hh:mm A");
+var setTimeEL = moment("10:00 AM", ["h:mm A"]).format("h:mm A");
 $("#tenAm").text(setTimeEL);
 
-var setTimeEL = moment("11:00 AM", ["h:mm A"]).format("hh:mm A");
+var setTimeEL = moment("11:00 AM", ["h:mm A"]).format("h:mm A");
 $("#elevenAm").text(setTimeEL);
 
-var setTimeEL = moment("12:00 PM", ["h:mm A"]).format("hh:mm A");
+var setTimeEL = moment("12:00 PM", ["h:mm A"]).format("h:mm A");
 $("#twelvePm").text(setTimeEL);
 
-var setTimeEL = moment("1:00 PM", ["h:mm A"]).format("hh:mm A");
+var setTimeEL = moment("1:00 PM", ["h:mm A"]).format("h:mm A");
 $("#onePm").text(setTimeEL);
 
-var setTimeEL = moment("2:00 PM", ["h:mm A"]).format("hh:mm A");
+var setTimeEL = moment("2:00 PM", ["h:mm A"]).format("h:mm A");
 $("#twoPm").text(setTimeEL);
 
-var setTimeEL = moment("3:00 PM", ["h:mm A"]).format("hh:mm A");
+var setTimeEL = moment("3:00 PM", ["h:mm A"]).format("h:mm A");
 $("#threePm").text(setTimeEL);
 
-var setTimeEL = moment("4:00 PM", ["h:mm A"]).format("hh:mm A");
+var setTimeEL = moment("4:00 PM", ["h:mm A"]).format("h:mm A");
 $("#fourPm").text(setTimeEL);
 
-var setTimeEL = moment("5:00 PM", ["h:mm A"]).format("hh:mm A");
+var setTimeEL = moment("5:00 PM", ["h:mm A"]).format("h:mm A");
 $("#fivePm").text(setTimeEL);
 
-var setTimeEL = moment("6:00 PM", ["h:mm A"]).format("hh:mm A");
+var setTimeEL = moment("6:00 PM", ["h:mm A"]).format("h:mm A");
 $("#sixPm").text(setTimeEL);
 
 
@@ -116,11 +116,29 @@ $("#sixText").val(localStorage.getItem("6:00PM"));
 
  //if statements for color coded for past, present or future
 
-// need time and text area IDs
+// if moment current is <= mometn set past          light grey
+// if moment current is === mometn set present      light blue
+// if moment current is >= mometn set future        light green
 
-// if moment current is =< mometn set past color light grey
+var timeOfDay = [ "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM" ]
+
+var timeColor = document.querySelectorAll(".form-control")
+
+function textBoxColor() {
+    if (timeOfDay < moment("8:00 AM", ["h:mm A"]).format("h:mm A") ) {
+        $(timeColor).addClass("past");
+    }
+    else if (timeOfDay === moment("8:00 AM", ["h:mm A"]).format("h:mm A")) {
+        $(timeColor).addClass("present");
+    }
+    else (timeOfDay > moment("8:00 AM", ["h:mm A"]).format("h:mm A"));{
+        $(timeColor).addClass("future");
+    }
+}
 
 
-// if moment current is =< mometn set present   light blue
-// if moment current is =< mometn set future    light green
+textBoxColor()
+console.log(timeOfDay)
+console.log(timeColor)
+console.log(currentTimeEl)
 
