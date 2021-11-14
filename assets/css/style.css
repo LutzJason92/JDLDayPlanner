@@ -71,6 +71,14 @@ body {
   color: black;
 }
 
+.sectionQuestion {
+  text-align: center;
+  margin-bottom: 20px;
+  color: goldenrod;
+  font-weight: bold;
+}
+
 .lead {
   color: rgb(0 123 255);
+  font-weight: bolder;
 }
