@@ -5,8 +5,8 @@ var time = moment();
 var currentTimeEl = moment().format("h:mm A");
 var currentTime = moment().format("HH:mm")
 
-var setTimeEight = moment("8:00", ["HH:mm"]).format("HH:mm");
-var setTimeNine = moment("9:00", ["HH:mm"]).format("HH:mm");
+var setTimeEight = moment("08:00", ["HH:mm"]).format("HH:mm");
+var setTimeNine = moment("09:00", ["HH:mm"]).format("HH:mm");
 var setTimeTen = moment("10:00", ["HH:mm"]).format("HH:mm");
 var setTimeEleven = moment("11:00", ["HH:mm"]).format("HH:mm");
 var setTimeTwelve = moment("12:00", ["HH:mm"]).format("HH:mm");
