@@ -1,8 +1,10 @@
-# Dynamic Day Planner Application
+# JDLDayPlanner
+
+### Dynamic Day Planner Application
 
 ## Image of Application
 
-![IMAGEPLACEHOLDER](./assets/images/screenshotDayPlanner.png)
+![Screen Shot](./assets/images/screenshotDayPlanner.png)
 
 ## TASK
 
@@ -15,8 +17,6 @@ AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
 ```
-
-# JDLDayPlanner
 
 ## Acceptance Criteria
 
@@ -48,5 +48,8 @@ WHEN I refresh the page
 You are required to submit the following for review:
 
 [x] The URL of the deployed application
+![DeployedPage](https://lutzjason92.github.io/JDLDayPlanner/)
+
 [x] The URL of the GitHub repository, with a unique name and a README describing the project
+![GitHubRepo](https://github.com/LutzJason92/JDLDayPlanner)
 ```
